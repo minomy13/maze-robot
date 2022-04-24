@@ -1,0 +1,17 @@
+Adafruit-Blinka==7.2.1
+adafruit-circuitpython-busdevice==5.1.8
+adafruit-circuitpython-motor==3.4.0
+adafruit-circuitpython-motorkit==1.6.6
+adafruit-circuitpython-pca9685==3.4.1
+adafruit-circuitpython-register==1.9.8
+adafruit-circuitpython-typing==1.5.0
+adafruit-circuitpython-vl53l1x==1.1.0
+Adafruit-PlatformDetect==3.22.1
+Adafruit-PureIO==1.1.9
+autopep8==1.6.0
+certifi==2021.10.8
+pycodestyle==2.8.0
+pyftdi==0.54.0
+pyserial==3.5
+pyusb==1.2.1
+toml==0.10.2
