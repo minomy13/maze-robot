@@ -9,6 +9,7 @@
 Library to access motor driver of 'Maze Robot'
 """
 
+
 from adafruit_motorkit import MotorKit
 from adafruit_motor import stepper
 from time import sleep
@@ -39,6 +40,26 @@ class MRMovement:
                 sleep(.03)
             self._step1.release()
             self._step2.release()
+
+        elif type == 'field':
+            print("field is currently not supported.")
+
+    def _move_backward(self, type='step', steps=1):
+        types = ['step', 'field']
+        if type not in types:
+            raise ValueError("Invalid Type: {type}, please use one of those: {types}".format(
+                type=type, types=types))
+
+        if type == 'step':
+            for i in range(steps):
+                self._step1.onestep(
+                    direction=stepper.BACKWARD, style=stepper.DOUBLE)
+                self._step2.onestep(
+                    direction=stepper.BACKWARD, style=stepper.DOUBLE)
+                sleep(.03)
+            self._step1.release()
+            self._step2.release()
+
         elif type == 'field':
             print("field is currently not supported.")
 
